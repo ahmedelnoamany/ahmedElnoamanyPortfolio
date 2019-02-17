@@ -1,0 +1,26 @@
+* ,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  box-sizing: border-box;
+  background-color: #EFE6DD;
+  overflow: hidden;
+}
+.app-container {
+  height: 98vh;
+  width: 100vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,95 @@
+.intro-container {
+  height: 80%;
+  width: 60%;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.intro-icons-container {
+  height: 20%;
+  width: 60%;
+  position: absolute;
+  bottom:0;
+  right: 0;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+
+  &__circle-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 20rem;
+  }
+  &--circle {
+    height: 12rem;
+    width: 12rem;
+    border-radius: 6rem;
+    background-color: #D3D2D2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &--icon {
+    height: 7rem;
+    width: 7rem;
+    fill: black;
+  }
+}
+.text {
+  font-family: Helvetica;
+  text-align: center;
+
+  &__primary {
+    font-weight: bold;
+    font-size: 4rem;
+    color: #564E58;
+    
+  }
+  &__secondary {
+    font-weight: 100;
+    font-size: 4rem;
+    color: #904E55;
+  }
+  &__base {
+    color: #FFE0B5;
+    font-weight: 100;
+
+    &--title {
+      font-size: 4rem;
+    }
+    &--description {
+      font-size: 2rem;
+      width: 65%;
+    }
+    &--descriptionLarge{
+      font-size: 2rem;
+      width: 95%;
+    }
+    &--subheading {
+      font-size: 4rem;
+    }
+  }
+  &__projects {
+    color: white;
+
+    &--heading {
+      color: #605856;
+      font-weight: 500;
+      font-size: 6rem;
+    }
+    &--description {
+      font-size: 2.5rem;
+      font-weight: normal;
+    }
+  }
+
+}
