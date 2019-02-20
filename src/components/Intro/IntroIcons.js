@@ -18,7 +18,7 @@ class IntroIcons extends Component {
     let { icons } = this.state;
     return icons.map((iconName, index) => {
       return (
-        <div className='intro-icons-container__circle-container'>
+        <div key={iconName} className='intro-icons-container__circle-container'>
           <div className="intro-icons-container--circle">
             <svg className="intro-icons-container--icon">
               <use xlinkHref={`${iconSprites}#icon-${iconName}`}></use>

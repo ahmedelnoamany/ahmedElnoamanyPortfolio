@@ -5,11 +5,6 @@ import DraggableView from 'components/DraggableView/DraggableView';
 import './styles.scss';
 
 class BaseView extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { 
-    }
-  }
   render() {
     return (
       <div className='draggable-container'>

@@ -1,0 +1,30 @@
+.tech-table {
+  width: 90%;
+  margin: 1% auto;
+  bottom: 0;
+  border-spacing: 1rem;
+
+  font-family: Helvetica;
+  font-size: 2rem;
+  font-weight: lighter;
+  color: #392D38;
+  text-align: center;
+
+  &__row {
+    background-color: white;
+  }
+  &__element {
+    width: 33%;
+    height: 5rem;
+    border: 1px solid;
+    -webkit-box-shadow: -1px 0px 7px -1px rgba(0,0,0,0.5);
+    -moz-box-shadow: -1px 0px 7px -1px rgba(0,0,0,0.5);
+    box-shadow: -1px 0px 7px -1px rgba(0,0,0,0.5);
+    &--1 {
+      border-color: #C0392B;
+    }
+    &--2 {
+      border-color: #27AE60;
+    }
+  }
+}

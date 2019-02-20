@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './styles.scss';
 import iconSprites from 'assets/icons.svg';
+import { connect } from 'react-redux';
 
 class SideView extends Component {
   renderBase() {
@@ -62,15 +63,20 @@ class SideView extends Component {
     } else if (whichView === 1) {
       return this.renderInterestedSide();
     } else if (whichView === 2) {
-      return this.renderWebSide();
-    } else {
       return this.renderMobileSide();
+    } else {
+      return this.renderWebSide();
     }
   }
   
   render() {
-    return this.renderActiveView(0);
+    console.log('The current View is: ', this.props.currentView);
+    return this.renderActiveView(this.props.currentView);
   };
 }
-
-export default SideView;
+function mapStateToProps(state) {
+  return {
+    currentView: state.baseReducer.currentView
+  }
+}
+export default connect(mapStateToProps)(SideView);

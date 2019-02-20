@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 
   &__circle-container {
     display: flex;
@@ -46,18 +46,19 @@
 }
 .text {
   font-family: Helvetica;
-  text-align: center;
 
   &__primary {
     font-weight: bold;
     font-size: 4rem;
     color: #564E58;
-    
+    text-align: center;
   }
   &__secondary {
     font-weight: 100;
     font-size: 4rem;
     color: #904E55;
+    text-align: center;
+
   }
   &__base {
     color: #FFE0B5;
@@ -79,16 +80,21 @@
     }
   }
   &__projects {
-    color: white;
+    color: #3A2E39;
 
     &--heading {
-      color: #605856;
-      font-weight: 500;
-      font-size: 6rem;
+      font-weight: lighter;
+      font-size: 5rem;
+    }
+    &--subheading {
+      font-family: Helvetica;
+      font-weight: bold;
+      font-size: 2rem;
+      margin-left: 5%;
     }
     &--description {
-      font-size: 2.5rem;
-      font-weight: normal;
+      font-size: 2rem;
+      font-weight: lighter;
     }
   }
 
