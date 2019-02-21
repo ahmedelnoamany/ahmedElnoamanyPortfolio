@@ -2,7 +2,7 @@
   "name": "ahmedelnoamanyportfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ahmedelnoamany.github.io/ahmedElnoamanyPortfolio/",
+  "homepage": "https://ahmedelnoamany.github.io/ahmedElnoamanyPortfolio",
   "dependencies": {
     "node-sass": "^4.11.0",
     "r": "0.0.5",
