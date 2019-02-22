@@ -1,3 +1,24 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) { @content };   //600px
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) { @content };    //900px
+  }
+  @if $breakpoint == small-tab {
+    @media (max-width: 65.625em) { @content }; //1050px
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) { @content };  //1200px
+  }
+  @if $breakpoint == medium-desktop {
+    @media(max-width: 84em) { @content }; //1350px
+  }
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) { @content };  //1800px
+  }
+}
+
 .contact-form {
   height: 92vh;
   width: 49vw;
@@ -9,6 +30,11 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  @include respond(phone) {
+    width: 90vw;
+    height: 70vh;
+    margin: 3rem auto;
+  }
 
   &__header-container {
     flex: .1;
@@ -25,11 +51,16 @@
     &--heading {
       font-size: 8rem;
       font-weight: 400;
-      
+      @include respond(phone) {
+        font-size: 5rem;
+      }
     }
     &--subheading {
       font-size: 4rem;
       font-weight: 100;
+      @include respond(phone) {
+        font-size: 2.5rem;
+      }
     }
   }
   &__contact-section {
@@ -67,6 +98,9 @@
       font-weight: bold;
       font-size: 3rem;
       text-align: center;
+      @include respond(phone) {
+        font-size: 2rem;
+      }
     }
     a:visited, a:link, a:active {
       font-family: Arial;
@@ -85,5 +119,8 @@
     overflow-y: scroll;
     display: flex;
     justify-content: center;
+   @include respond(phone) {
+     width: 100%;
+   }
   }
 }

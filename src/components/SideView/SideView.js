@@ -8,8 +8,8 @@ class SideView extends Component {
     return (
       <div className='side-view'>
         <div className='side-view__headings-container'>
-          <h1 className='text text__primary u-margin-bottom-medium'>What can I do for you?</h1>
-          <h2 className='text text__secondary'>Hi, I'm Ahmed Elnoamany</h2>
+          <h1 className='heading heading__primary'>What can I do for you?</h1>
+          <h2 className='heading heading__secondary'>Hi, I'm Ahmed Elnoamany</h2>
         </div>
         <div className="side-view__social-container">
         <a href="https://github.com/ahmedelnoamany" target="_blank">
@@ -31,8 +31,8 @@ class SideView extends Component {
     return (
       <div className='side-view'>
         <div className='side-view__headings-container'>
-          <h1 className='text text__primary u-margin-bottom-medium'>Native Mobile Applications</h1>
-          <h2 className='text text__secondary'>Modern feeling cross platform apps!</h2>
+          <h1 className='heading heading__primary u-margin-bottom-medium'>Native Mobile Applications</h1>
+          <h2 className='heading heading__secondary'>Modern feeling cross platform apps!</h2>
         </div>
       </div>
     )
@@ -41,8 +41,8 @@ class SideView extends Component {
     return (
       <div className='side-view'>
         <div className='side-view__headings-container'>
-          <h1 className='text text__primary u-margin-bottom-medium'>Front End Web Development</h1>
-          <h2 className='text text__secondary'>Hello responsive designs!</h2>
+          <h1 className='heading heading__primary u-margin-bottom-medium'>Front End Web Development</h1>
+          <h2 className='heading heading__secondary'>Hello responsive designs!</h2>
         </div>
       </div>
     )
@@ -51,8 +51,8 @@ class SideView extends Component {
     return (
       <div className='side-view'>
         <div className='side-view__headings-container'>
-          <h1 className="text text__primary u-margin-bottom-medium">Alright, Let's get started</h1>
-          <h2 className='text text__secondary'> Take a look at my resume!</h2>
+          <h1 className="heading heading__primary u-margin-bottom-medium">Alright, Let's get started</h1>
+          <h2 className='heading heading__secondary'> Take a look at my resume!</h2>
         </div>
       </div>
     )

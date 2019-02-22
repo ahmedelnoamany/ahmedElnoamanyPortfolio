@@ -47,9 +47,10 @@ class DraggableView extends Component {
     this.wrapperRef = node;
   }
   handleStop(whichView) {
+    console.log('Dragging')
     let { view1Position, view2Position, view3Position } = this.state;
     console.log('WhichView: ', whichView);
-    if(whichView === 1) {
+    if(whichView === 1 && this.props.windowWidth > 600) {
       if (view1Position === null || view1Position.x === 0) {
         this.setState({ 
           view1Position: {x:(this.props.windowWidth * .6), y:0},
@@ -65,7 +66,7 @@ class DraggableView extends Component {
         });
         this.props.changeView(0);
       }
-    } else if (whichView === 2) {
+    } else if (whichView === 2 && this.props.windowWidth > 600) {
       if(view2Position === null || view2Position.x === 0) {
         this.setState({
           view1Position: { x:(this.props.windowWidth * .6), y:0 },
@@ -82,12 +83,62 @@ class DraggableView extends Component {
         this.props.changeView(1);
 
       }
-    } else if (whichView === 3) {
+    } else if (whichView === 3 && this.props.windowWidth > 600) {
       if(view3Position === null || view3Position.x === 0) {
         this.setState ({
           view1Position: { x: (this.props.windowWidth * .6), y: 0},
           view2Position: { x: (this.props.windowWidth *.598), y: 0 },
           view3Position: { x: (this.props.windowWidth *.596), y: 0 },
+          activeHeading: 3
+        });
+        this.props.changeView(3);
+      } else {
+        this.setState({
+          view3Position: { x: 0, y: 0 },
+          activeHeading: 2
+        });
+        this.props.changeView(2);
+
+      }
+    } else if (whichView === 1 && this.props.windowWidth <= 600) {
+        if (view1Position === null || view1Position.y === 0) {
+          this.setState({ 
+            view1Position: { x: 0, y: (window.innerHeight * .765)},
+            activeHeading: 1
+          });
+          this.props.changeView(1);
+        } else {
+          this.setState({ 
+            view1Position: {x:0, y: 0},
+            view2Position: {x:0, y: 0},
+            view3Position: {x:0, y: 0},
+            activeHeading: 0
+          });
+          this.props.changeView(0);
+        }
+    } else if (whichView === 2 && this.props.windowWidth <= 600) {
+        if(view2Position === null || view2Position.y === 0) {
+          this.setState({
+            view1Position: { x: 0, y: (window.innerHeight * .765)},
+            view2Position: { x: 0, y: (window.innerHeight *.765) },
+            activeHeading: 2
+          });
+          this.props.changeView(2);
+        } else {
+          this.setState({
+            view2Position: { x: 0, y: 0 },
+            view3Position: { x: 0, y: 0 },
+            activeHeading: 1
+          });
+          this.props.changeView(1);
+
+        }
+    } else if (whichView === 3 && this.props.windowWidth <= 600) {
+      if(view3Position === null || view3Position.y === 0) {
+        this.setState ({
+          view1Position: { x: 0, y: (window.innerHeight * .765)},
+          view2Position: { x: 0, y: (window.innerHeight *.765) },
+          view3Position: { x: 0, y: (window.innerHeight * .768) },
           activeHeading: 3
         });
         this.props.changeView(3);
@@ -119,6 +170,7 @@ class DraggableView extends Component {
     let viewSettings = [
       {
         view: 1,
+        axis: this.props.windowWidth > 600 ? 'x' : 'y',
         bounds: 'parent',
         position: view1Position,
         title: 'I\'m Interested',
@@ -126,24 +178,37 @@ class DraggableView extends Component {
       },
       {
         view: 2,
-        bounds: {left: 0, right: (this.props.windowWidth * .598), top: 0, bottom: 0},
+        axis: this.props.windowWidth > 600 ? 'x' : 'y',
+        bounds: {
+          left: 0,
+          right: this.props.windowWidth > 600 ? (this.props.windowWidth * .598) : 0,
+          top: 0,
+          bottom: this.props.windowWidth <= 600 ? (window.innerHeight * .555) : 0
+        },
         position: view2Position,
         title: 'Mobile',
         func: this.renderMobile()
       },
       {
         view: 3,
-        bounds: {left: 0, right: (this.props.windowWidth * .595), top: 0, bottom: 0},
+        axis: this.props.windowWidth > 600 ? 'x' : 'y',
+        bounds: {
+          left: 0,
+          right: this.props.windowWidth > 600 ? (this.props.windowWidth * .595) : 0,
+          top: 0,
+          bottom: this.props.windowWidth <= 600 ? (window.innerHeight * .595) : 0
+        },
         position: view3Position,
         title: 'Web',
         func: this.renderWeb()
       }
     ];
+    console.log('Window settings: ',viewSettings, 'window height is: ', window);
 
     return viewSettings.map((currentViewSettings) => {
       return (
         <Draggable 
-          axis='x'
+          axis={currentViewSettings.axis}
           handle='.draggable-container__views__handle'
           defaultPosition={{ x: 0, y: 0}}
           bounds={currentViewSettings.bounds}

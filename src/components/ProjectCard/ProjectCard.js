@@ -23,14 +23,14 @@ class ProjectCard extends Component {
   }
   renderCardFront() {
     return (
-      <div style={{height: '100%', width: '100%', display: 'flex', flexDirection: 'column'}} className={this.props.display === 'mobile' ? 'project-card--2' : 'project-card--1'}>
+      <div className={this.props.display === 'mobile' ? 'project-card__side project-card--2' : 'project-card__side project-card--1'}>
         <div className='project-card__button-container'>
           <div style={{marginLeft: '2%', width: '90%'}}>
             <h1 className='text text__projects--heading'>{this.props.project.name}</h1>
             <h3 className='text__projects--subheading'>Explore Nature</h3>
           </div>
           <button className={this.props.display === 'mobile' ? `project-card__button-container__btn project-card__button-container__btn--2` : `project-card__button-container__btn project-card__button-container__btn--1`} onClick={() => this.setState({cardFrontActive: false})}>
-            <svg style={{height: '3rem', width: '3rem', fill: '#fff'}}>
+            <svg className='project-card__button-container__btn__icon'>
               <use xlinkHref={`${iconSprites}#icon-repeat`}></use>
             </svg>
           </button>
@@ -65,14 +65,14 @@ class ProjectCard extends Component {
   }
   renderCardBack() {
     return (
-      <div style={{height: '100%', width: '100%', display: 'flex', flexDirection: 'column'}} className={this.props.display === 'mobile' ? 'project-card--2' : 'project-card--1'}>
+      <div className={this.props.display === 'mobile' ? 'project-card__side project-card--2' : 'project-card__side project-card--1'}>
         <div className='project-card__button-container project-card__rotated-content'>
           <div style={{marginLeft: '2%', width: '90%'}}>
             <h1 className='text text__projects--heading'>{this.props.project.name}</h1>
             <h3 className='text__projects--subheading'>Explore Nature</h3>
           </div>
           <button className={this.props.display === 'mobile' ? `project-card__button-container__btn project-card__button-container__btn--2` : `project-card__button-container__btn project-card__button-container__btn--1`} onClick={() => this.setState({cardFrontActive: true})}>
-            <svg style={{height: '3rem', width: '3rem', fill: '#fff'}}>
+            <svg className='project-card__button-container__btn__icon'>
               <use xlinkHref={`${iconSprites}#icon-repeat`}></use>
             </svg>
           </button>

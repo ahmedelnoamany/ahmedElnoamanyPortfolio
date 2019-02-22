@@ -56,7 +56,10 @@ class ContactForm extends Component {
           file={resume}
           onLoadSuccess={() => this.onDocumentLoadSuccess}
         >
-          <Page pageNumber={pageNumber} />
+          <Page 
+            pageNumber={pageNumber} 
+            width={window.innerWidth <= 600 ?( window.innerWidth * .9) : null}
+          />
         </Document>
       </div>
     );
