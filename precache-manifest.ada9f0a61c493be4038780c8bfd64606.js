@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/screen1.3b8112c7.png"
   },
   {
-    "revision": "44542558b4f972ec02ac",
-    "url": "/static/css/main.cc641c85.chunk.css"
+    "revision": "e234193b603d6a53ebce",
+    "url": "/static/css/main.a8811a2c.chunk.css"
   },
   {
     "revision": "fdfcfda2d9b1bf31db52",
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/static/media/AhmedElnoamanyResume.0001b1c9.pdf"
   },
   {
-    "revision": "44542558b4f972ec02ac",
-    "url": "/static/js/main.44542558.chunk.js"
+    "revision": "e234193b603d6a53ebce",
+    "url": "/static/js/main.e234193b.chunk.js"
   },
   {
     "revision": "f3202153f0f7fd7fc4f840ce81cc296e",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/static/media/screen5.1bf81719.png"
   },
   {
-    "revision": "1fefbae56a9e84ecc3f4cb1b3b2751be",
+    "revision": "97f3f6e2c055c8667b7f0aeb32a2840e",
     "url": "/index.html"
   }
 ];
