@@ -150,6 +150,9 @@
         @include respond(phone) {
           transform: none;
           margin-left: 1rem;
+          width: fit-content;
+          height: fit-content;
+          bottom: 1rem;
         }
       }
     }

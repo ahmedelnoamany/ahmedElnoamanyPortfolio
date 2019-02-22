@@ -47,9 +47,7 @@ class DraggableView extends Component {
     this.wrapperRef = node;
   }
   handleStop(whichView) {
-    console.log('Dragging')
     let { view1Position, view2Position, view3Position } = this.state;
-    console.log('WhichView: ', whichView);
     if(whichView === 1 && this.props.windowWidth > 600) {
       if (view1Position === null || view1Position.x === 0) {
         this.setState({ 
@@ -157,7 +155,6 @@ class DraggableView extends Component {
   }
   renderWeb() {
     let { webProjects } = this.props;
-    console.log('The webproject is ', webProjects[0]);
     return webProjects.map((project) => <ProjectCard project={project} display='web' key={project.name}/>)
   }
   renderMobile() {
@@ -203,7 +200,6 @@ class DraggableView extends Component {
         func: this.renderWeb()
       }
     ];
-    console.log('Window settings: ',viewSettings, 'window height is: ', window);
 
     return viewSettings.map((currentViewSettings) => {
       return (
