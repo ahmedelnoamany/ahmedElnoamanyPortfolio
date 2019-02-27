@@ -2,6 +2,15 @@
   @if $breakpoint == phone {
     @media (max-width: 37.5em) { @content };   //600px
   }
+  @if $breakpoint == medium-height {
+    @media (max-height: 37.5em) { @content };
+  }
+  @if $breakpoint == small-height {
+    @media (max-height: 30em) { @content };
+  }
+  @if $breakpoint == ex-small-height {
+    @media (max-height: 25em) { @content };
+  }
   @if $breakpoint == tab-port {
     @media (max-width: 56.25em) { @content };    //900px
   }
@@ -20,7 +29,7 @@
 }
 
 .project-card {
-  height: 92vh;
+  height: 80vh;
   width: 40vw;
   margin: 2.5rem auto;
   border-radius: 1%;
@@ -38,6 +47,11 @@
     height: 70vh;
     margin: 3rem auto;
   }
+  @include respond(medium-height) {
+    width: 80%;
+    height: 100%;
+    margin: 5rem auto;
+  }
   &__side {
     height: 100%;
     width: 100%;
@@ -48,7 +62,7 @@
     border: .3rem solid #C0392B;
   }
   &--2 {
-    border: .3rem solid #27AE60;
+    border: .3rem solid #E3772D;
   }
 
   -webkit-box-shadow: -1px 0px 7px -1px rgba(0,0,0,0.75);
@@ -56,6 +70,10 @@
   box-shadow: -1px 0px 7px -1px rgba(0,0,0,0.75);
   &__rotated-content {
     transform: rotateY(-180deg);
+    height: 80vh;
+    width: 40vw;
+    margin: 2.5rem auto;
+    border-radius: 1%;
 
     display: flex;
     flex-direction: column;
@@ -66,8 +84,19 @@
         -ms-animation: fadein .5s; /* Internet Explorer */
          -o-animation: fadein .5s; /* Opera < 12.1 */
             animation: fadein .5s;
+    
+    @include respond(phone) {
+      width: 90vw;
+      height: 70vh;
+      margin: 3rem auto;
+    }
+    @include respond(medium-height) {
+      width: 80%;
+      height: 100%;
+      margin: 5rem auto;
+    }
     &__scale-of-awesome {
-      height: 80%;
+      height: 100%;
       width: 30%;
       border-radius: 3%;
       background-color: #DEDEDE;
@@ -104,9 +133,10 @@
     &__info-container {
       flex: .7;
       width: 100%;
+      height: 100%;
       background-color: transparent;
-      display: flex;
-      flex-direction: row;
+      // display: flex;
+      // flex-direction: row;
 
       &--left {
         flex: .5;
@@ -166,11 +196,19 @@
         width: 3.7rem;
         height: 4.4rem;
       }
+      @include respond(medium-height) {
+        width: 3.7rem;
+        height: 4.4rem;
+      }
       &__icon {
         height: 3rem;
         width: 3rem;
         fill: #fff;
         @include respond(phone) {
+          height: 2rem;
+          width: 2rem;
+        }
+        @include respond(medium-height) {
           height: 2rem;
           width: 2rem;
         }
@@ -201,7 +239,7 @@
         background-color: #C0392B;
       }
       &--2 {
-        background-color: #27AE60;
+        background-color: #E3772D;
       }
     }
     
@@ -219,7 +257,7 @@
     &__thumbnails-container {
       flex:.2;
       width: 50%;
-      background-color: white;
+      background-color: transparent;
 
       display: flex;
       flex-direction: row;
@@ -260,24 +298,37 @@
     &--main-image {
       display: block;
       margin: 0 auto;
-      max-width: 90%;
+      max-width: 40%;
       height: auto;
       -webkit-box-shadow: -1px 0px 7px -1px rgba(0,0,0,0.75);
       -moz-box-shadow: -1px 0px 7px -1px rgba(0,0,0,0.75);
       box-shadow: -1px 0px 7px -1px rgba(0,0,0,0.75);
 
       border: .2rem solid #C0392B;
+      
+      @include respond(medium-height) {
+        max-width: 40%;
+      }
+      @include respond(phone) {
+        max-width: 40%;
+      }
+      @include respond(tab-port) {
+        max-width: 40%;
+      }
+      @include respond(tab-land) {
+        max-width: 40%;
+      }
 
     }
     &--main-image-mobile {
       display: block;
       margin: 0 auto;
-      max-width: 28%;
+      max-width: 23%;
       height: auto;
       -webkit-box-shadow: -1px 0px 7px -1px rgba(0,0,0,0.75);
       -moz-box-shadow: -1px 0px 7px -1px rgba(0,0,0,0.75);
       box-shadow: -1px 0px 7px -1px rgba(0,0,0,0.75);
-      border: .2rem solid #27AE60;
+      border: .2rem solid #E3772D;
     }
     
   }

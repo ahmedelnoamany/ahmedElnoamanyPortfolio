@@ -12,12 +12,12 @@ class SideView extends Component {
           <h2 className='heading heading__secondary'>Hi, I'm Ahmed Elnoamany</h2>
         </div>
         <div className="side-view__social-container">
-        <a href="https://github.com/ahmedelnoamany" target="_blank">
+        <a href="https://github.com/ahmedelnoamany" target="">
             <svg  className="side-view__social-container--icon">
               <use xlinkHref={`${iconSprites}#icon-github`}></use>
             </svg>
           </a>
-          <a href="https://www.linkedin.com/in/ahmedelnoamany94/" target="_blank">
+          <a href="https://www.linkedin.com/in/ahmedelnoamany94/" target="">
             <svg className="side-view__social-container--icon">
               <use xlinkHref={`${iconSprites}#icon-linkedin`}></use>
             </svg>

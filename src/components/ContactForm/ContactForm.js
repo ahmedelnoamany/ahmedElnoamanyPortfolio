@@ -36,13 +36,13 @@ class ContactForm extends Component {
             <svg className="side-view__social-container--icon">
               <use xlinkHref={`${iconSprites}#icon-linkedin`}></use>
             </svg>
-            <p>Contact me through LinkedIn!</p>
+            <p className='contact-form__header-container--contact-text'>Contact me through LinkedIn!</p>
           </a>
           <a href={resume} download='AhmedElnoamanyResume.pdf'>
             <svg className="side-view__social-container--icon">
               <use xlinkHref={`${iconSprites}#icon-file-text-o`}></use>
             </svg>
-            <p>Download my resume!</p>
+            <p className='contact-form__header-container--contact-text'>Download my resume!</p>
           </a>
         </div>
       </div>
@@ -58,7 +58,7 @@ class ContactForm extends Component {
         >
           <Page 
             pageNumber={pageNumber} 
-            width={window.innerWidth <= 600 ?( window.innerWidth * .9) : null}
+            width={ window.innerWidth <= 600 ? (window.innerWidth * .9) : (window.innerWidth * .45)}
           />
         </Document>
       </div>

@@ -2,6 +2,18 @@
   @if $breakpoint == phone {
     @media (max-width: 37.5em) { @content };   //600px
   }
+  @if $breakpoint == large-height {
+    @media(max-height: 40em) { @content };
+  }
+  @if $breakpoint == medium-height {
+    @media (max-height: 37.5em) { @content };
+  }
+  @if $breakpoint == small-height {
+    @media (max-height: 30em) { @content };
+  }
+  @if $breakpoint == ex-small-height {
+    @media (max-height: 25em) { @content };
+  }
   @if $breakpoint == tab-port {
     @media (max-width: 56.25em) { @content };    //900px
   }
@@ -54,6 +66,9 @@
       @include respond(phone) {
         font-size: 5rem;
       }
+      @include respond(medium-height) {
+        font-size: 5rem;
+      }
     }
     &--subheading {
       font-size: 4rem;
@@ -61,6 +76,12 @@
       @include respond(phone) {
         font-size: 2.5rem;
       }
+      @include respond(medium-height) {
+        font-size: 2.5rem;
+      }
+    }
+    &--contact-text {
+      font-size: 1rem;
     }
   }
   &__contact-section {
@@ -100,6 +121,10 @@
       text-align: center;
       @include respond(phone) {
         font-size: 2rem;
+      }
+      @include respond(medium-height) {
+        font-size: 2rem;
+        margin: 1rem auto;
       }
     }
     a:visited, a:link, a:active {

@@ -27,7 +27,7 @@ class ProjectCard extends Component {
         <div className='project-card__button-container'>
           <div style={{marginLeft: '2%', width: '90%'}}>
             <h1 className='text text__projects--heading'>{this.props.project.name}</h1>
-            <h3 className='text__projects--subheading'>Explore Nature</h3>
+            <h3 className='text__projects--subheading'>{this.props.project.subheading ? this.props.project.subheading : ''}</h3>
           </div>
           <button className={this.props.display === 'mobile' ? `project-card__button-container__btn project-card__button-container__btn--2` : `project-card__button-container__btn project-card__button-container__btn--1`} onClick={() => this.setState({cardFrontActive: false})}>
             <svg className='project-card__button-container__btn__icon'>
@@ -40,7 +40,7 @@ class ProjectCard extends Component {
             <img 
               alt='Project-thumnail'
               className={this.props.display === 'mobile' ?"project-card__image-container--main-image-mobile" : "project-card__image-container--main-image"}
-              src={require(`assets/${this.props.project.thumbnails[this.state.displayedImageIndex]}`)}
+              src={require(`assets/${this.props.display}${this.props.index+1}/${this.props.project.thumbnails[this.state.displayedImageIndex]}`)}
             />
           </div>
           <div className='project-card__image-container__thumbnails-container'>
@@ -79,8 +79,7 @@ class ProjectCard extends Component {
         </div>
         
         <div className='project-card__rotated-content project-card__rotated-content__info-container'>
-          <div className='project-card__rotated-content__info-container project-card__rotated-content__info-container--right'>
-            <div className='project-card__rotated-content__scale-of-awesome'>
+            {/* <div className='project-card__rotated-content__scale-of-awesome'>
               <div 
                 style={{flex: .3, backgroundColor: this.props.project.awesome >= 3 ?'#DBAE19' : 'transparent', width: '100%', textAlign: 'center'}}
               >
@@ -96,13 +95,13 @@ class ProjectCard extends Component {
               >
                 <p style={{marginTop: '-12%', fontSize:'1rem', fontWeight: 100, fontFamily: 'Arial', color: '#605856'}}>Pretty Awesome</p><hr />
               </div>
-            </div>
-          </div>
+            </div> */}
+            Coming Soon
         </div>
 
-        <div className='project-card__rotated-content project-card__rotated-content__text-container'>
+        {/* <div className='project-card__rotated-content project-card__rotated-content__text-container'>
             <p className='project-card__rotated-content__description-long'>{this.props.project.descriptionLong}</p>
-        </div>
+        </div> */}
       </div>
     )
   }

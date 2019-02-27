@@ -155,12 +155,12 @@ class DraggableView extends Component {
   }
   renderWeb() {
     let { webProjects } = this.props;
-    return webProjects.map((project) => <ProjectCard project={project} display='web' key={project.name}/>)
+    return webProjects.map((project, index) => <ProjectCard project={project} index={index} display='web' key={project.name}/>)
   }
   renderMobile() {
     let { mobileProjects } = this.props;
     console.log(mobileProjects);
-    return mobileProjects.map((project) => <ProjectCard project={project} display='mobile' key={project.name} />)
+    return mobileProjects.map((project, index) => <ProjectCard project={project} index={index} display='mobile' key={project.name} />)
   }
   renderDraggableView() {
     let { view1Position, view2Position, view3Position } = this.state;

@@ -2,6 +2,15 @@
   @if $breakpoint == phone {
     @media (max-width: 37.5em) { @content };   //600px
   }
+  @if $breakpoint == medium-height {
+    @media (max-height: 37.5em) { @content };
+  }
+  @if $breakpoint == small-height {
+    @media (max-height: 30em) { @content };
+  }
+  @if $breakpoint == ex-small-height {
+    @media (max-height: 25em) { @content };
+  }
   @if $breakpoint == tab-port {
     @media (max-width: 56.25em) { @content };    //900px
   }
@@ -23,7 +32,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  background-color: #EFE6DD;
+  background-color: #FFF4D5;
   height: 100vh;
 
   display: flex;
@@ -51,6 +60,7 @@
       font-size: 4rem;
       color: #564E58;
       text-align: center;
+
       @include respond(phone) {
         font-size: 2rem;
         margin-top: 1%;
@@ -61,6 +71,7 @@
       font-size: 4rem;
       color: #904E55;
       text-align: center;
+
       @include respond(phone) {
         font-size: 2rem;
       }
@@ -76,6 +87,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     @include respond(phone) {
       width: 100%;
       flex: .8;
@@ -92,6 +104,7 @@
     align-items: center;
     justify-content: space-evenly;
     margin: 2rem;
+  
     
     @include respond(phone) {
       bottom: 0;
@@ -102,10 +115,20 @@
     &--icon {
       height: 10rem;
       width: 10rem;
+
       @include respond(phone) {
         height: 3rem;
         width: 3rem;
       }
+      @include respond(small-height) {
+        height: 2rem;
+        width: 2rem;
+      }
+      @include respond(medium-height) {
+        height: 3rem;
+        width: 3rem;
+      }
+      
       &:hover{ 
         fill: #904E55;
       }

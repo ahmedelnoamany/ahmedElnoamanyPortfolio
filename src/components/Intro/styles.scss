@@ -17,6 +17,15 @@
   @if $breakpoint == big-desktop {
     @media (min-width: 112.5em) { @content };  //1800px
   }
+  @if $breakpoint == medium-height {
+    @media (max-height: 37.5em) { @content };
+  }
+  @if $breakpoint == small-height {
+    @media (max-height: 30em) { @content };
+  }
+  @if $breakpoint == ex-small-height {
+    @media (max-height: 25em) { @content };
+  }
 }
 
 .intro-container {
@@ -35,7 +44,7 @@
     flex: .9;
     width: 100%;
     position: relative;
-    margin-top: 30%;
+    margin-top: 25%;
   }
 }
 .intro-icons-container {
@@ -90,6 +99,17 @@
       width: 4rem;
       border-radius: 2rem;
     }
+    @include respond(small-height) {
+      height: 4rem;
+      width: 4rem;
+      border-radius: 2rem;
+      margin-left: 2rem;
+    }
+    @include respond(ex-small-height) {
+      height: 3.5rem;
+      width: 3.5rem;
+      border-radius: 2rem;
+    }
   }
   &--icon {
     height: 6rem;
@@ -106,6 +126,14 @@
     @include respond(phone) {
       height: 3rem;
       width: 3rem;
+    }
+    @include respond(small-height) {
+      height: 3rem;
+      width: 3rem;
+    }
+    @include respond(ex-small-height) {
+      height: 2.5rem;
+      width: 2.5rem;
     }
 
   }
