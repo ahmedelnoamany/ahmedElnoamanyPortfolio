@@ -36,7 +36,7 @@ export const mobileProjects = [
     techs: ['React Native', 'JavaScript', 'Redux'],
     descriptionLong: 'This is a long description that would be shown on the back card display for each product. Gotta be cool though and have a lot of cool details and stuff sooo cooll brah wowowowow yeahhhhhhh so good.',
     awesome: 2, 
-    thumbnails: ['screen1.png', 'screen2.png', 'screen3.png']
+    thumbnails: ['screen1.png', 'screen2.png', 'screen3.png', 'screen4.png', 'screen5.png', 'screen6.png', 'screen7.png', 'screen8.png', 'screen9.png']
   },
   {
     name: 'Trucke-Pal',
@@ -45,7 +45,7 @@ export const mobileProjects = [
     techs: ['React Native', 'JavaScript', 'Redux', 'AWS'],
     descriptionLong: 'This is a long description that would be shown on the back card display for each product. Gotta be cool though and have a lot of cool details and stuff sooo cooll brah wowowowow yeahhhhhhh so good.',
     awesome: 2, 
-    thumbnails: ['screen1.png', 'screen2.png', 'screen3.png']
+    thumbnails: ['screen1.png', 'screen2.png', 'screen3.png', 'screen4.png']
   },
   {
     name: 'Citadel Solutions',
@@ -53,7 +53,7 @@ export const mobileProjects = [
     techs: ['React Native', 'JavaScript', 'Redux', 'Firebase'],
     descriptionLong: 'This is a long description that would be shown on the back card display for each product. Gotta be cool though and have a lot of cool details and stuff sooo cooll brah wowowowow yeahhhhhhh so good.',
     awesome: 2,
-    thumbnails: ['screen1.png', 'screen2.png', 'screen3.png']
+    thumbnails: ['screen1.png', 'screen2.png', 'screen3.png', 'screen4.png']
   },
   {
     name: 'WorkFlow',

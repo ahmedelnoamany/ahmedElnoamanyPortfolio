@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import './styles.scss';
 import iconSprites from 'assets/icons.svg';
+import 'styles/main.scss';
+
 
 class IntroIcons extends Component {
   state = {

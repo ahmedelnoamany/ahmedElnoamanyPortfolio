@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './styles.scss';
+import 'styles/main.scss';
 
 class TechTable extends Component {
   render() {

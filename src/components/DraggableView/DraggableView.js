@@ -7,7 +7,7 @@ import iconSprites from 'assets/icons.svg';
 import ContactForm from 'components/ContactForm/ContactForm';
 import ProjectCard from 'components/ProjectCard/ProjectCard';
 
-import './styles.scss';
+import 'styles/main.scss';
 
 class DraggableView extends Component {
   constructor(props) {

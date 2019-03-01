@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import './styles.scss';
 import iconSprites from 'assets/icons.svg';
 import TechTable from 'components/TechTable/TechTable';
+import 'styles/main.scss';
+
 
 class ProjectCard extends Component {
   constructor(props) {

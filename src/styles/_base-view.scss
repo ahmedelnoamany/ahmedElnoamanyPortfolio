@@ -1,0 +1,14 @@
+.draggable-container {
+  width: 100%;
+  height: 100%;
+  background-color: #593D2C;
+  position: relative;
+
+  @include respond(phone) {
+    flex: .9;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}

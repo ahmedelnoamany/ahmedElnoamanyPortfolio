@@ -4,7 +4,7 @@ import IntroIcons from 'components/Intro/IntroIcons';
 import DraggableView from 'components/DraggableView/DraggableView';
 import windowSize from 'react-window-size';
 
-import './styles.scss';
+import 'styles/main.scss';
 
 class BaseView extends Component {
   renderMobile() {

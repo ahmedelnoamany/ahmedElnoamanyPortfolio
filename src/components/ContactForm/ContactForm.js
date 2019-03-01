@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Document, Page } from 'react-pdf/dist/entry.jest.js';
-import './styles.scss';
 import resume from 'components/ContactForm/AhmedElnoamanyResume.pdf';
 import iconSprites from 'assets/icons.svg';
+import 'styles/main.scss';
+
 
 class ContactForm extends Component {
   constructor(props){
